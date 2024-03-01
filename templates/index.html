@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Passy</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/signin">Sign In</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<div class="container">
+  <h1 class="text-center my-4">Welcome to Passy</h1>
+  <p class="lead text-center">Passy is a passion project aimed at providing a secure and user-friendly password manager. Keep your passwords safe and accessible with Passy.</p>
+  <form action="/account" method="post" class="form-signin">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" autofocus>
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input autocomplete="off" name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1" name="loggedin" value="1">
+            <label class="form-check-label" for="exampleCheck1">Stay logged in</label>
+          </div>
+        </div>
+        <div class="col-6 text-right">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock %}

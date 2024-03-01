@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="container">
+    <h1 class="text-center my-4">Here you sign in</h1>
+    <form action="/createaccount" method="post" class="form-signin">
+        <input autocomplete="off" autofocus name="email" placeholder="E-Mail" type="email" class="form-control">
+        <input autocomplete="off" name="password" placeholder="Password" type="password" class="form-control">
+        <button type="submit" class="btn btn-lg btn-primary btn-block">Sign in</button>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="container">
+  <form action="{{ url_for('edit', id=account[0]) }}" method="post">
+    <div class="form-group">
+      <label for="website">Website</label>
+      <input type="text" class="form-control" id="website" name="website" value="{{ account.website_name }}">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" name="email" value="{{ account.email }}">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" name="password" value="{{ account.password }}">
+    </div>
+    <button type="submit" class="btn btn-primary">Save changes</button>
+  </form>
+</div>
+{% endblock %}
